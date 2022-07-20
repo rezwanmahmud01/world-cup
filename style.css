@@ -1,0 +1,245 @@
+/* Needed font  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* common style or unitilities */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.read-more {
+  color: tomato;
+  cursor: pointer;
+}
+.read-more i {
+  font-size: 15px;
+}
+
+/*---------------------- 
+main content style part  
+------------------------*/
+main {
+  display: flex;
+  justify-content: center;
+  background-color: #2d25a0;
+  margin-bottom: 70px;
+  border-radius: 80px;
+}
+.container {
+  width: 1050px;
+}
+.banner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  padding: 60px 0 85px 0;
+}
+.banner-title h1 {
+  font-size: 64px;
+  line-height: 80px;
+  color: #ffff;
+  margin-bottom: 27px;
+}
+.banner-button a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px 35px;
+  display: inline-block;
+  background-color: #e02c6d;
+  color: #ffff;
+  transform: scale(1);
+  transition: 0.8s ease-in-out;
+}
+.banner-button a:hover {
+  transform: scale(1.3);
+  border-radius: 10px;
+  background-color: #86103b;
+  letter-spacing: 0.07em;
+}
+
+/* banner image part  */
+
+.banner-image {
+  width: 556px;
+  height: 438px;
+  transition: 0.8s ease-in-out;
+}
+.banner:hover .banner-image {
+  transform: matrix(-1, 0, 0, 1, 0, 1);
+}
+.banner-image img {
+  max-width: 100%;
+}
+/*---------------------
+ transfer details style 
+ ----------------------*/
+
+.main-section1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+.players {
+  width: 1050px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+.player {
+  padding: 15px 15px 33px 15px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 10px 10px 0 0;
+}
+.player-image img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.player-name {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.player-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2em;
+  text-align: justify;
+}
+.container1 {
+  position: relative;
+  width: 300px;
+  height: 250px;
+  margin: 240px auto;
+  background: #000;
+  color: wheat;
+  border-radius: 15px;
+  float: right;
+}
+.box {
+  position: center;
+  width: calc(500px-20px);
+  height: calc(500px-20px);
+  background: #000;
+  float: center;
+  margin: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: medium;
+}
+/* ----------
+footer part 
+------------- */
+
+.main-footer {
+  padding: 60px 0;
+  text-align: center;
+}
+.main-footer img {
+  width: 480px;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(27, 181, 204, 0.156);
+}
+.social-icons .icon {
+  background-color: #dddd;
+  font-size: 32px;
+  margin-right: 14px;
+  padding: 20px;
+  border-radius: 50%;
+  color: black;
+}
+.main-footer p {
+  font-size: 18px;
+  margin-top: 20px;
+}
+.footer-part {
+  text-decoration: underline;
+  text-transform: capitalize;
+  display: inline-flexbox;
+  text-align: center;
+  color: #000;
+}
+/* ------------------------------
+Responsive Media Query part 
+--------------------------------- */
+
+
+/* ----------------------------
+Responsive for mobile devices  
+-------------------------------*/
+
+@media only screen and (max-width:688px) {
+    .banner-left-content, .banner-image, .container, .players, .report-container, .news-main-section .main-footer{
+        width: 100%;
+    }
+    .banner, .players, .report-highlights, .recent-news{
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+    }
+    .banner{
+        text-align: center;
+        padding: 10px 0;
+    }
+    .banner-left-content{
+        text-align: center;
+    }
+    .banner-button a{
+        margin-bottom: 30px;
+    }
+    
+    .banner-image img{
+        width: 80%;
+    }
+/*------------------------------
+     Responsive for Tablet devices  
+     -------------------------------*/
+
+    @media only screen and (min-width:688px) and (max-width: 992px) {
+        .banner-left-content, .banner-image, .container, .players, .report-container, .news-main-section .main-footer{
+            width: 100%;
+        }
+        .banner, .report-highlights{
+            grid-template-columns: repeat(1, 1fr);
+            justify-content: center;
+        }
+        .players, .recent-news{
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+        }
+        .banner{
+            text-align: center;
+            padding: 10px 0;
+        }
+        .banner-left-content{
+            text-align: center;
+        }
+        .banner-button a{
+            margin-bottom: 30px;
+        }
+
+        .banner-image img{
+            width: 70%;
+            max-height: 100%;
+        }
+        .main-footer{
+            text-align: center;
+        }
+        .main-footer img{
+            width: 50%;
+        }
+        .social-icons .icon{
+            font-size: 25px;
+            padding: 15px;
+        }
+    }
+
+/*----------------------------------
+ End website Style part, Thank You  
+ -----------------------------------*/
+
+ /* ------------------------------  Happy Codding With Programming Hero ----------------------------------*/
